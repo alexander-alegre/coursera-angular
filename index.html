@@ -4,10 +4,21 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Coursera Angular Course</title>
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="app.css">
 	</head>
-	<body>
-		<h1>Coursera Course</h1>
-		
+	<body ng-app="NameCalculator">
+		<h1>Name Calculator</h1>
+		<div ng-controller="NameCalculatorController">
+			<div>
+				Your Name:
+				<input type="text" ng-model="name" ng-keyup="displayNumeric()" />
+			</div>
+			<div>
+				Total Numeric value of person's name is: {{totalValue}}
+			</div>
+		</div>
+
+		<script type="text/javascript" src="scripts/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
 	</body>
 </html>
