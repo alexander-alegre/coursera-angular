@@ -1,0 +1,34 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 300;
+}
+h1, p {
+	margin-bottom:  12px;
+}
+p {
+	padding: 10px;
+}
+input {
+	width:  60%;
+	height:  50px;
+	font-size: 1.3em;
+	padding: 0 5px;
+}
+#goodMessage {
+	background: #b3ff99;
+	width: 20%;
+	height: 10%;
+	color: #fff;
+}
+#badMessage {
+	background: #ff9999;
+	width: 20%;
+	height: 10%;
+	color: #fff;
+}
