@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Module 1 Angular App</title>
+	<link rel="icon" href="./favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet">
 	<link rel="stylesheet" href="styles/app.css">
 </head>
@@ -11,8 +12,8 @@
 	<div ng-controller="EatCalcController">
 		<h1>Do You Eat Too Much??</h1>
 		<p>List everything that you eat separated by commas.</p>
-		<input type="text" placeholder="salads, burgers, cookies" />
-		<p id="{{messageId}}">{{eatCalculations()}}</p>
+		<input id="input" type="text" placeholder="salads, burgers, cookies" />
+		<p id="{{messageId}}">{{countWords()}}</p>
 	</div>
 
 
@@ -21,6 +22,7 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>

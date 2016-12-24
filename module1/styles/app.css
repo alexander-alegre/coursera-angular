@@ -22,13 +22,17 @@ input {
 }
 #goodMessage {
 	background: #b3ff99;
-	width: 20%;
-	height: 10%;
-	color: #fff;
+	width:  59%;
+	height: 30px;
+	color: #444;
+	text-align: center;
+	margin: auto;
 }
 #badMessage {
 	background: #ff9999;
-	width: 20%;
-	height: 10%;
-	color: #fff;
+	width: 59%;
+	height: 30px;
+	color: #444;
+	text-align: center;
+	margin: auto;
 }
