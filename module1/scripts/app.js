@@ -1,23 +1,33 @@
 (function() {
 	angular.module('EatCalc' , [])
 	.controller('EatCalcController', function($scope) {
+		// current year for footer
+		$scope.year = new Date().getFullYear();
+		// count wordSpacing
 
-		$scope.countWords = function(words) {
-			var numWords = function() {
-				// calculate the comma separated values
 
-				
-				return $scope.wordCount;
-			};
-			// call function above with the values
-			numWords();
+	
+
+		$scope.countWords = function() {
+			// calculate the comma separated values
+			var wordCount = 0;
+			var str = $scope.userInput;
+			wordCount = str.split(",").length;
+			// if (wordCount.slice(-1) === ',') {
+			// 	wordCount--;
+			// }
+			
+			console.log(wordCount);
 			// show message depending on how many words the user typed
-			if ($scope.wordCount > 3) {
-				$scope.eatMessage = 'You eat too much!';
-				$scope.messageId = 'badMessage';
-			} else if ($scope.wordCount < 4) {
+			if (wordCount === 0) {
+				$scope.eatMessage = 'Please Enter Some Text';
+				$scope.messageId = 'noMessage';
+			} else if (wordCount < 4) {
 				$scope.eatMessage = 'Enjoy!';
 				$scope.messageId = 'goodMessage';
+			} else if (wordCount > 3) {
+				$scope.eatMessage = 'You eat too much';
+				$scope.messageId = 'badMessage';
 			} else {
 				$scope.eatMessage = '';
 				$scope.messageId = 'noMessage';

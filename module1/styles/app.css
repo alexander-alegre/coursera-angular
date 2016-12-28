@@ -20,6 +20,22 @@ input {
 	font-size: 1.3em;
 	padding: 0 5px;
 }
+button {
+	margin: 20px;
+	padding:  10px 30px;
+	border-radius: 6px;
+	background: #edff63;
+}
+button:hover, button:focus {
+	font-size: 1em;
+	cursor: pointer;
+}
+#footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
 #goodMessage {
 	background: #b3ff99;
 	width:  59%;
