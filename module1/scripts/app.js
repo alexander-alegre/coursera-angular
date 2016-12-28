@@ -10,14 +10,12 @@
 
 		$scope.countWords = function() {
 			// calculate the comma separated values
-			var wordCount = 0;
 			var str = $scope.userInput;
-			wordCount = str.split(",").length;
-			// if (wordCount.slice(-1) === ',') {
-			// 	wordCount--;
-			// }
-			
-			console.log(wordCount);
+			var wordCount = str.split(",").length;
+			// this breaks the code but need it in order to get accurate number
+			if (str.slice(-1) === ',') {
+				wordCount -= 1;
+			}
 			// show message depending on how many words the user typed
 			if (wordCount === 0) {
 				$scope.eatMessage = 'Please Enter Some Text';
