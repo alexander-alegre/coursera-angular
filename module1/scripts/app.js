@@ -3,24 +3,21 @@
 	.controller('EatCalcController', function($scope) {
 		// current year for footer
 		$scope.year = new Date().getFullYear();
-		// count wordSpacing
-
-
-	
 
 		$scope.countWords = function() {
-			// calculate the comma separated values
+			// get user input
 			var str = $scope.userInput;
+			// calculate the comma separated values
 			var wordCount = str.split(",").length;
-			// this breaks the code but need it in order to get accurate number
+			// checks if last character is , and removes one count
 			if (str.slice(-1) === ',') {
 				wordCount -= 1;
 			}
 			// show message depending on how many words the user typed
-			if (wordCount === 0) {
+			if (wordCount == 0) {
 				$scope.eatMessage = 'Please Enter Some Text';
 				$scope.messageId = 'noMessage';
-			} else if (wordCount < 4) {
+			} else if (wordCount != 0 && wordCount < 4) {
 				$scope.eatMessage = 'Enjoy!';
 				$scope.messageId = 'goodMessage';
 			} else if (wordCount > 3) {
@@ -35,4 +32,3 @@
 		};
 	});
 })();
-
